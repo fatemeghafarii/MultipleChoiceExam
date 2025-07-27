@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleChoiceTest.EndPoint.MVC", "MultipleChoiceTest.EndPoint.MVC\MultipleChoiceTest.EndPoint.MVC.csproj", "{0FC59628-2B1A-41B8-B35D-3E28EF130B43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleChoiceTest.Model", "MultipleChoiceTest.Model\MultipleChoiceTest.Model.csproj", "{32CF88C2-60FA-4006-8525-F0BE75EDD60F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleChoiceTest.Persistence.EF", "MultipleChoiceTest.Persistence.EF\MultipleChoiceTest.Persistence.EF.csproj", "{FC9F60A1-2E2A-4A86-950D-D946BA9D32A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleChoiceTest.Application.Contract", "MultipleChoiceTest.Application.Contract\MultipleChoiceTest.Application.Contract.csproj", "{60ED2374-6D83-4BCE-82D7-2F0FDDA4ADBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleChoiceTest.Application", "MultipleChoiceTest.Application\MultipleChoiceTest.Application.csproj", "{46087D87-AFDB-4AE6-ADB2-5410D296986C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FC59628-2B1A-41B8-B35D-3E28EF130B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC59628-2B1A-41B8-B35D-3E28EF130B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC59628-2B1A-41B8-B35D-3E28EF130B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC59628-2B1A-41B8-B35D-3E28EF130B43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32CF88C2-60FA-4006-8525-F0BE75EDD60F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32CF88C2-60FA-4006-8525-F0BE75EDD60F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32CF88C2-60FA-4006-8525-F0BE75EDD60F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32CF88C2-60FA-4006-8525-F0BE75EDD60F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC9F60A1-2E2A-4A86-950D-D946BA9D32A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC9F60A1-2E2A-4A86-950D-D946BA9D32A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC9F60A1-2E2A-4A86-950D-D946BA9D32A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC9F60A1-2E2A-4A86-950D-D946BA9D32A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60ED2374-6D83-4BCE-82D7-2F0FDDA4ADBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60ED2374-6D83-4BCE-82D7-2F0FDDA4ADBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60ED2374-6D83-4BCE-82D7-2F0FDDA4ADBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60ED2374-6D83-4BCE-82D7-2F0FDDA4ADBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46087D87-AFDB-4AE6-ADB2-5410D296986C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46087D87-AFDB-4AE6-ADB2-5410D296986C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46087D87-AFDB-4AE6-ADB2-5410D296986C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46087D87-AFDB-4AE6-ADB2-5410D296986C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {543EA20B-539F-4AC1-BD61-56736D0DADE7}
+	EndGlobalSection
+EndGlobal

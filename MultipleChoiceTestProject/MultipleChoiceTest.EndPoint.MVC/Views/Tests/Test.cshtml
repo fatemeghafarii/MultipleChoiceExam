@@ -1,0 +1,72 @@
+﻿@using MultipleChoiceTest.Application.Contract.Dtos
+
+@model TestDto
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var q = 0;
+}
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @ViewBag.SuccessMessage
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<form method="post" asp-action="Test" dir="rtl" style="text-align: right; font-family: 'Vazir', sans-serif; font-size: 18px;padding-right: 20px;">
+    <input type="hidden" name="userId" value="@ViewBag.UserId" /> 
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="StartTime" />
+    <input type="hidden" asp-for="EndTime" />
+    <input type="hidden" asp-for="TestDate" />
+
+
+    @foreach (var question in Model.Questions)
+    {
+        var optionsList = question.Options.ToList();
+
+        <div style="margin-bottom: 30px;">
+            <h3 style="font-size: 20px;">سؤال@(q + 1)) @question.Text</h3>
+
+            <div id="question_@q" class="question-group" style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
+                @foreach (var option in question.Options)
+                {
+                    var i = optionsList.IndexOf(option);
+                    <div style="display: flex; align-items: center;">
+                        <input type="radio"
+                               class="square-radio"
+                               id="q@q_option_@i"
+                               name="Answers[@q].SelectedOption"
+                               value="@option.Id" />
+                        <label for="q@q_option_@i" style="margin-right: 5px;">@option.Text</label>
+                    </div>
+                }
+            </div>
+
+            <input type="hidden" name="Answers[@q].QuestionId" value="@question.Id" />
+
+        </div>
+        <input type="hidden" name="Answers[@q].QuestionId" value="@question.Id" />
+        q++;
+    }
+    <button type="submit" class="btn btn-primary ">ثبت آزمون</button>
+</form>
+
+<script>
+    setTimeout(function () {
+        var alert = document.querySelector('.alert');
+        if (alert) {
+            alert.classList.remove('show');
+            alert.classList.add('hide');
+        }
+    }, 3000); // بعد از 3 ثانیه
+</script>
